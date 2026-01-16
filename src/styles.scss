@@ -1,0 +1,47 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fafafa;
+}
+
+/* Status color classes */
+.status-running {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.status-stopped {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+.status-alarm {
+  color: #f44336;
+  font-weight: 500;
+}
+
+/* Status badge classes */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.running {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.stopped {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-badge.alarm {
+  background-color: #ffebee;
+  color: #c62828;
+}
