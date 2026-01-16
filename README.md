@@ -13,11 +13,13 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 ## Screenshots
 
 ### Asset List
-![Asset List](screenshots/asset-list.png)
+<img width="1918" height="964" alt="Screenshot 2026-01-16 140108" src="https://github.com/user-attachments/assets/f9860872-9b53-4b27-98bd-427f99283ceb" />
+
 *View all assets with status indicators (Running, Stopped, Alarm)*
 
 ### Asset Details
-![Asset Details](screenshots/asset-details.png)
+<img width="1919" height="867" alt="Screenshot 2026-01-16 135952" src="https://github.com/user-attachments/assets/af519347-0a69-4b7c-919f-efa8fad9385d" />
+
 *Detailed view with latest sensor readings (temperature, pressure, timestamp)*
 
 ## Tech Stack
@@ -39,7 +41,6 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd controlpoint-frontend
 ```
 
 2. Install dependencies:
@@ -86,10 +87,6 @@ src/
 ## Available Scripts
 
 - `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run watch` - Build with watch mode
-- `npm test` - Run unit tests
-
 ## Features in Detail
 
 ### Asset Status
@@ -99,7 +96,3 @@ src/
 
 ### Auto-refresh
 Both the asset list and asset details pages automatically refresh every 5 seconds to display the latest data.
-
-## License
-
-This project is licensed under the MIT License.
