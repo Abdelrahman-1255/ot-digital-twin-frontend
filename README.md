@@ -13,7 +13,7 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 ## Screenshots
 
 ### Asset List
-<img width="1918" height="964" alt="Screenshot 2026-01-16 140108" src="https://github.com/user-attachments/assets/f9860872-9b53-4b27-98bd-427f99283ceb" />
+<img width="1911" height="710" alt="Screenshot 2026-01-16 140604" src="https://github.com/user-attachments/assets/2d26d835-6081-40b9-8ba6-9df713bd2972" />
 
 *View all assets with status indicators (Running, Stopped, Alarm)*
 
