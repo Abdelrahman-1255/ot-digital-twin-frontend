@@ -5,6 +5,7 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 ## Features
 
 - 📊 **Asset List View** - Display all assets with their current status
+- 👁️ **See the Latest** - View button to check the latest sensor readings for each asset
 - 🔍 **Asset Details** - View detailed information for each asset
 - 📡 **Real-time Sensor Readings** - Monitor temperature and pressure data
 - 🔄 **Auto-refresh** - Data updates automatically every 5 seconds
@@ -41,6 +42,7 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 1. Clone the repository:
 ```bash
 git clone <repository-url>
+cd controlpoint-frontend
 ```
 
 2. Install dependencies:
@@ -61,7 +63,8 @@ The application expects a backend API running at `http://localhost:8080` with th
 
 - `GET /api/assets` - Get all assets
 - `GET /api/assets/:id` - Get asset by ID
-- `GET /api/sensor-readings/asset/:assetId/latest` - Get latest sensor reading for an asset
+- `GET /api/sensor-readings/asset/:assetId/latest` - Get the latest sensor reading for an asset
+from this repository https://github.com/Abdelrahman-1255/ot-digital-twin-backend
 
 ## Project Structure
 
@@ -93,6 +96,12 @@ src/
 - **RUNNING** - Asset is operating normally (green)
 - **STOPPED** - Asset is currently stopped (orange)
 - **ALARM** - Asset requires attention (red)
+
+### Sensor Readings
+The asset details page displays real-time sensor data, including:
+- **Temperature** - Current temperature reading in °C
+- **Pressure** - Current pressure reading in kPa
+- **Timestamp** - Exact date and time of the reading
 
 ### Auto-refresh
 Both the asset list and asset details pages automatically refresh every 5 seconds to display the latest data.
