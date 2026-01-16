@@ -29,7 +29,6 @@ A real-time asset monitoring dashboard built with Angular 19 and Angular Materia
 - **UI Library**: Angular Material 19
 - **HTTP Client**: Angular HttpClient
 - **Styling**: SCSS
-- **State Management**: RxJS
 
 ## Prerequisites
 
