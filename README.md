@@ -64,6 +64,7 @@ The application expects a backend API running at `http://localhost:8080` with th
 - `GET /api/assets` - Get all assets
 - `GET /api/assets/:id` - Get asset by ID
 - `GET /api/sensor-readings/asset/:assetId/latest` - Get the latest sensor reading for an asset
+- 
 from this repository https://github.com/Abdelrahman-1255/ot-digital-twin-backend
 
 ## Project Structure
