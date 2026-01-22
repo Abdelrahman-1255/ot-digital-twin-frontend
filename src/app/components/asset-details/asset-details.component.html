@@ -1,0 +1,99 @@
+<button mat-button routerLink="/assets" class="back-button">
+  <mat-icon>arrow_back</mat-icon>
+  Back to Assets
+</button>
+
+@if (loading) {
+  <div class="loading-container">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading asset details...</p>
+  </div>
+} @else if (!asset) {
+  <mat-card class="error-card">
+    <mat-card-content>
+      <mat-icon>error</mat-icon>
+      <p>Asset not found</p>
+      <button mat-raised-button routerLink="/assets">Go to Asset List</button>
+    </mat-card-content>
+  </mat-card>
+} @else {
+  <div class="details-grid">
+    <!-- Asset Information Card -->
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>devices</mat-icon>
+          Asset Details
+        </mat-card-title>
+        <span style="flex: 1;"></span>
+        <button mat-icon-button (click)="loadData()" matTooltip="Refresh">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="detail-row">
+          <span class="label">ID:</span>
+          <span class="value">{{ asset.id }}</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="detail-row">
+          <span class="label">Name:</span>
+          <span class="value">{{ asset.name }}</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="detail-row">
+          <span class="label">Type:</span>
+          <span class="value">{{ asset.type }}</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="detail-row">
+          <span class="label">Status:</span>
+          <span class="status-badge" [ngClass]="getStatusClass(asset.status)">
+            {{ asset.status }}
+          </span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Sensor Reading Card -->
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>sensors</mat-icon>
+          Latest Sensor Reading
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        @if (!sensorReading) {
+          <div class="no-data">
+            <mat-icon>info</mat-icon>
+            <p>No sensor readings available</p>
+          </div>
+        } @else {
+          <div class="sensor-grid">
+            <div class="sensor-item temperature">
+              <mat-icon>thermostat</mat-icon>
+              <span class="sensor-label">Temperature</span>
+              <span class="sensor-value">{{ sensorReading.temperature | number:'1.2-2' }} °C</span>
+            </div>
+            <div class="sensor-item pressure">
+              <mat-icon>speed</mat-icon>
+              <span class="sensor-label">Pressure</span>
+              <span class="sensor-value">{{ sensorReading.pressure | number:'1.2-2' }} kPa</span>
+            </div>
+            <div class="sensor-item timestamp">
+              <mat-icon>schedule</mat-icon>
+              <span class="sensor-label">Timestamp</span>
+              <span class="sensor-value">{{ formatTimestamp(sensorReading.timestamp) }}</span>
+            </div>
+          </div>
+        }
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="auto-refresh-info">
+    <mat-icon>autorenew</mat-icon>
+    <span>Auto-refreshing every 5 seconds</span>
+  </div>
+}
